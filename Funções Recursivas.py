@@ -32,14 +32,12 @@ def fsumsub(n):
 print('O resultado é:', fsumsub(num))
 
 #Exercicio_03
-num = int(input('digite o enésimo número: '))
+num = float(input('digite o enésimo número: '))
+x = 1
 def fsumfrac(n):
-  den = 1
-  if den >= n:
+  if x >= n:
     return n
   else:
-    s = (1 / n + fsumfrac(1/(n + 1)))
-    den = den + 1
+    s = (1/x + fsumfrac(1/(x+1)))
     return s
 print('o resultado é: ', fsumfrac(num))
-    
