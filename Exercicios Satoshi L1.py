@@ -64,3 +64,35 @@ print('O perímetro da circunferência é de:\n{:.3f}cm ou {:.3f}m'.format(2*3.1
 #Exec12 - Receba o ano de nascimento e o ano atual. Calcule e mostre a sua idade e quantos anos terá daqui a 17 anos.
 anonasc = int(input('Insira o seu ano de nascimento: '))
 anoatual = int(input('Insira o ano atual: '))
+print('Você tem {} anos\nVocê terá {} anos daqui à 17 anos.'.format(anoatual - anonasc, anoatual + 17 - anonasc))
+
+#Exec13 - Receba a quantidade de alimento em quilos. Calcule e mostre quantos dias durará esse alimento sabendo que a pessoa consome 50g ao dia.
+alimento = float(input('Insira a quantidade de alimento (em Kg): '))
+print('Seu alimento irá durar {} dias, considerando que você come 50g por dia!'.format((alimento*1000)/(50)))
+
+#Exec14 - Receba 2 ângulos de um triângulo. Calcule e mostre o valor do 3º ângulo.
+ang1 = int(input('Insira o primeiro ângulo:'))
+ang2 = int(input('Insira o segundo ângulo:'))
+print('O valor do terceiro ângulo é {}!'.format(180 - ang1 - ang2))
+
+#Exec15 - Receba os valores de 2 catetos de um triângulo retângulo. Calcule e mostre a hipotenusa.
+cateto1 = float(input('Insira o valor do primeiro cateto: '))
+cateto2 = float(input('Insira o valor do segundo cateto: '))
+hipotenusa = (((cateto1 ** 2) + (cateto2 ** 2))**(1/2))
+print('Considererando os catetos {} e {}, a hipotenusa vale: {}'.format(cateto1, cateto2, hipotenusa))
+
+#Exec16 - Receba a quantidade de horas trabalhadas, o valor por hora, o percentual de desconto e o número de descendentes. Calcule o salário, que serão as horas trabalhadas x o valor por hora. Calcule o salário líquido (= Salário Bruto – desconto). A cada dependente será acrescido R$ 100 no Salário Líquido. Exiba o salário a receber.
+hrtrab = float(input('Insira a quantidade de horas trabalhadas (em decimal): '))
+valhr = float(input('Insira o valor por hora: '))
+desconto = float(input('Insira o percentual de desconto: '))
+desconto = 1 - (desconto/100)
+dependentes = float(input('Insira a quantidade de dependentes (caso houver): '))
+salario = hrtrab * valhr
+salliq = (salario * desconto) + (100 * dependentes)
+print('O salario líquido será de R${:.2f}'.format(salliq))
+
+#Exec17 - 
+
+#da tabuada
+num = int(input('Insira o número: '))
+print('A tabuada do número {} é:\n{} * 1 = {}\n{} * 2 = {}\n{} * 3 = {}\n{} * 4 = {}\n{} * 5 = {}\n{} * 6 = {}\n{} * 7 = {}\n{} * 8 = {}\n{} * 9 = {}\n{} * 10 = {}'.format(num, num, num * 1, num, num * 2, num, num * 3, num, num * 4, num, num * 5, num, num * 6, num, num * 7, num, num * 8, num, num * 9, num, num * 10))
