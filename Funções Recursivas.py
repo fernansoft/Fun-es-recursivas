@@ -37,18 +37,31 @@ def fs03(n):
   if (n <= 1):
     return n
   else:
-    s = ((n ** (-1)) + fs03((n-1) ** -1))
+    s = ((n ** (-1)) + fs03(n-1))
     return s
 print('o resultado é: ', fs03(num))
-#naodeucerto aaaaa
 
 #serie04
-num = float(input('insira o enésimo número: '))
-denominador = 1
-def fs04(n):
+def fs04(n, denominador):
   if (n < 1):
+    return (n/denominador)
+  else:
+    return ((n/denominador) + fs04(n - 1, denominador + 1))
+    
+n1 = float(input('insira o numero: '))
+denominador = 1
+print(fs04(n1, denominador))
+
+#serie05
+def ffat(n):
+  if n == 1:
     return n
   else:
-    s = ((n/denominador) + fs04((n - 1)/(denominador + 1)))
-    return s
-print('o resultado é: ', fs04(num))
+    return (n * ffat(n - 1))
+def fless (n):
+  if n < 1:
+    return n
+  else:
+    return (ffat(n) + fless(n - 1))
+num = int(input('Insira o enésimo termo da sequência: '))
+print ('O resultado é: ', fless(num))
