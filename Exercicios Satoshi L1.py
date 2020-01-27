@@ -91,7 +91,75 @@ salario = hrtrab * valhr
 salliq = (salario * desconto) + (100 * dependentes)
 print('O salario líquido será de R${:.2f}'.format(salliq))
 
-#Exec17 - 
+#Exec17 - Calcule a quantidade de litros gastos em uma viagem, sabendo que o automóvel faz 12 km/l. Receber o tempo de percurso e a velocidade média. 
+tpercurso = float(input('Insira o tempo do percurso em decimal: '))
+velmedia = float(input('Insira a velocidade média estimada (em Km): '))
+print('A quantidade de litros gastos é de {} litros'.format((tpercurso*velmedia)/12))
+
+#Exec18 - Receba 2 valores inteiros. Calcule e mostre o resultado da diferença do maior pelo menor.
+valor1 = int(input('Insira o primeiro valor inteiro: '))
+valor2 = int(input('Insira o segundo valor inteiro: '))
+if valor1 > valor2:
+    print('A diferença do maior valor pelo menor é de: {}'.format(valor1 - valor2))
+else:
+    print('A diferença do maior valor pelo menor é de: {}'.format(valor2 - valor1))
+
+#19. Receba 2 valores reais. Calcule e mostre o maior deles.
+real1 = float(input('Insira o primeiro valor: '))
+real2 = float(input('Insira o segundo valor: '))
+if real1 > real2:
+    print('O maior é o primeiro input, com valor de {}'.format(real1))
+else:
+    print('O maior é o segundo input, com valor de {}'.format(real2))
+
+# 20. Receba 3 coeficientes A, B, e C de uma equação do 2º grau da fórmula AX²+BX+C=0. Verifique e mostre a existência de raízes reais e se caso exista, calcule e mostre.
+a = float(input('Insira o valor de A: '))
+b = float(input('Insira o valor de B: '))
+c = float(input('Insira o valor de C: '))
+x1 = 0
+x2 = 0
+delta = ((b**2)-4*a*c)
+if delta < 0:
+    print('Valor de delta negativo, não existe raizes reais para esta equação!')
+else:
+    x1 = (-b + (delta**(1/2)))/2*a
+    x2 = (-b - (delta**(1/2)))/2*a
+    if delta == 0:
+        print('Valor de delta igual a zero, existe apenas uma raiz real para esta equação!\nSendo este: X = {}'.format(x1))
+    else:
+        print('Valor de delta maior que zero, existe duas raizes reais para esta equação!\nSendo estas: X1 = {}\nX2 = {}'.format(x1, x2))
+
+# 21. Receba 4 notas bimestrais de um aluno. Calcule e mostre a média aritmética. Mostre a mensagem de acordo com a média: 
+# a. Se a média for >= 6,0 exibir “APROVADO”;
+# b. Se a média for >= 3,0 ou < 6,0 exibir “EXAME”;
+# c. Se a média for < 3,0 exibir “RETIDO”.
+notasbimestrais = []
+somanotas = 0
+for i in range(4):
+    nota = float(input('Insira a sua nota do {}° bimestre: '.format(i + 1)))
+    while nota < 0 or nota > 10:
+        print('As notas são valores que vão de 0 à 10!')
+        nota = float(input('Insira a sua nota do {}° bimestre: '.format(i + 1)))
+    notasbimestrais.append(nota)
+for i in range(4):
+    somanotas += notasbimestrais[i]
+somanotas /= 4
+if somanotas >= 6:
+    print('APROVADO')
+elif somanotas >= 3:
+    print('EXAME')
+else:
+    print('RETIDO')
+
+# 22. Receba 2 valores inteiros e diferentes. Mostre seus valores em ordem crescente.
+val1 = int(input('Insira o primeiro valor inteiro: '))
+val2 = int(input('Insira o segundo valor inteiro: '))
+if val1 > val2:
+    print('Os valores em ordem crescente é:\n1° Valor = {}\n2° Valor = {}'.format(val2, val1))
+else:
+    print('Os valores em ordem crescente é:\n1° Valor = {}\n2° Valor = {}'.format(val1, val2))
+
+
 
 #da tabuada
 num = int(input('Insira o número: '))
