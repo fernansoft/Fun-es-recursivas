@@ -160,6 +160,25 @@ else:
     print('Os valores em ordem crescente é:\n1° Valor = {}\n2° Valor = {}'.format(val1, val2))
 
 
+# 23. Receba 3 valores obrigatoriamente em ordem crescente e um 4º valor não necessariamente em ordem. Mostre os 4 números em ordem crescente.
+encontre = 0
+achei = 0
+valores = []
+valores.append(float(input('Insira o 1° valor: ')))
+for i in range(2):
+    valor = float(input('Insira o {}° valor: '.format(i + 2)))
+    while valor < valores[i]:
+        print('Será aceito apenas valores inseridos em ordem crescente')
+        valor = float(input('Insira o {}° valor: '.format(i + 2)))
+    valores.append(valor)
+valores.append(float(input('Insira um 4° valor qualquer (não precisa ser crescente): ')))
+print('Os valores apresentados em ordem crescente são:')
+for i in range(4):
+    while 
+    for j in range(4):
+        if encontre == valores[i]:
+            print('{}° valor = {}'.format(i + 1, valores[i]))
+    encontre += 1
 
 #da tabuada
 num = int(input('Insira o número: '))
